@@ -19,7 +19,7 @@ public class SecurePaymentSystem {
 
         // Step 2: Connect securely to database
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/paymentsdb", "root", "Nepali_2053")) {
+                "jdbc:mysql://localhost:3306/paymentsdb", "root", "root@123")) {
 
             // Step 3: Use prepared statements (prevents SQL injection)
             String query = "INSERT INTO payments (user_id, user_name, amount, card_number, expiry_date) VALUES (?, ?, ?, ?, ?)";
